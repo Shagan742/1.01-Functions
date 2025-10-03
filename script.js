@@ -31,7 +31,7 @@ function greet () {
 */
 function averageNumbers () {
   // TODO: Write your code here
-
+//dont do this one
 }
 
 /* 
@@ -93,7 +93,7 @@ render(randomNumber);
 */
 function clearOutput () {
   // TODO: Write your code here
-
+render("<p>Output Cleared</p>");
 }
 
 // ---- Event listeners for the demo buttons ----
@@ -118,4 +118,13 @@ document.getElementById('btnClear').addEventListener('click', clearOutput)
   to a new button in index.html using addEventListener.
 */
 
+document.getElementById('btnTitle').addEventListener('click', title)
+document.getElementById('btnColor').addEventListener('click', color)
+document.getElementById('btnBgColor').addEventListener('click', bgColor)
+document.getElementById('btnDouble').addEventListener('click', double)
+
+
+function title() {
+  //change page title
+}
 
