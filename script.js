@@ -12,6 +12,13 @@ function render (html) {
 */
 function greet () {
   // TODO: Write your code here
+  const name=prompt("What's your name?");
+
+  if(!name) {
+    render("<h1>Please enter your name.</h1>");
+    return;
+  } 
+    render("<h5>Hello, " + name + "!</h5>");
 }
 
 /* 
@@ -24,6 +31,7 @@ function greet () {
 */
 function averageNumbers () {
   // TODO: Write your code here
+
 }
 
 /* 
@@ -35,6 +43,19 @@ function averageNumbers () {
 */
 function timeOfDay () {
   // TODO: Write your code here
+  const h= new Date().getHours();
+
+  let message='';
+
+  if(h<12) {
+    message='Good morning!';
+  } else if (h>=12 && h<18) {
+    message = 'Good afternoon!';
+  } else {
+    message = 'Good evening!';
+  }
+
+  render(`<p>${message}</p>`);
 }
 
 /* 
@@ -47,6 +68,21 @@ function timeOfDay () {
 */
 function randomBetween () {
   // TODO: Write your code here
+const min=parseInt(prompt("Enter a minimum number"));
+  const max=parseInt(prompt("Enter a maximum number"));
+
+if(isNaN(min) || isNaN(max)) {
+  render("<h3>Please enter the numbers</h3>");
+  return;
+} 
+
+if(min>=max) {
+  render("<h3>Please make sure your minimum number is less than your maximum number</h3>");
+  return;
+}
+
+const randomNumber=Math.floor(Math.random()*(max-min+1)+min);
+render(randomNumber);
 }
 
 /* 
@@ -57,6 +93,7 @@ function randomBetween () {
 */
 function clearOutput () {
   // TODO: Write your code here
+
 }
 
 // ---- Event listeners for the demo buttons ----
@@ -80,3 +117,5 @@ document.getElementById('btnClear').addEventListener('click', clearOutput)
   Write each function below, and don’t forget to connect each one 
   to a new button in index.html using addEventListener.
 */
+
+
