@@ -27,7 +27,7 @@ main {
 
 #out {
   min-height: 8rem;
-  background-color: #fef3c7; /* warm tan */
+  background-color: #fef3c7; /*warm tan*/
   border: 1px solid #e2e8f0;
   border-radius: 0.375rem;
   padding: 1rem;
@@ -71,3 +71,31 @@ main {
 
 
 /*make extra 4 btns colored*/
+
+#btnTitle {
+  background-color: #b45309;
+  border-color: #9a3412;
+  color: #fff;
+}
+#btnTitle:hover { background-color: #9a3412; }
+
+#btnColor {
+  background-color: #15803d;
+  border-color: #166534;
+  color: #fff;
+}
+#btnColor:hover { background-color: #166534; }
+
+#btnBgColor {
+  background-color: #d97706;
+  border-color: #b45309;
+  color: #fff;
+}
+#btnBgColor:hover { background-color: #b45309; }
+
+#btnDouble {
+  background-color: #78350f;
+  border-color: #451a03;
+  color: #fff;
+}
+#btnDouble:hover { background-color: #451a03; }

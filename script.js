@@ -126,5 +126,38 @@ document.getElementById('btnDouble').addEventListener('click', double)
 
 function title() {
   //change page title
+  const h1=document.getElementById('h1');
+  const changeTitle='🍂 🍂 🍂 🍂 🍂 Happy Fall! 🍂 🍂 🍂 🍂 🍂 🍂';
+
+  h1.innerHTML=`${changeTitle}`;
 }
 
+
+function color() {
+  const colorNames=['red','green','orange','blue','purple','#431407'];
+  // let i=Math.floor(Math.random()*colorNames.length);
+
+  for(let i=0; i<colorNames.length; i++) {
+      render(`<p style=\"color:${colorNames[i]};\">Output will appear here…</p>`);
+  }
+}
+
+function bgColor() {
+  const bgs=['red','green','blue','purple','white','orange','yellow'];
+    let i=Math.floor(Math.random()*bgs.length);
+    document.getElementById('out').classList.remove('bg-light');
+    document.getElementById('out').style.backgroundColor=bgs[i];
+}
+
+
+function double() {
+  const number=parseInt(prompt("Enter any number"));
+
+  if(isNaN(number)) {
+render("<h3>Please enter a number</h3>");
+  return;
+  }
+
+  const doubled=number*2;
+  render(`<p>Your doubled number: ${doubled}</p>`);
+}
