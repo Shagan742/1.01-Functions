@@ -132,14 +132,15 @@ function title() {
   h1.innerHTML=`${changeTitle}`;
 }
 
-
+let i=0;
 function color() {
-  const colorNames=['red','green','orange','blue','purple','#431407'];
-  // let i=Math.floor(Math.random()*colorNames.length);
-
-  for(let i=0; i<colorNames.length; i++) {
+  const colorNames=['#431407','red','green','orange','blue','purple'];
+  i++;
       render(`<p style=\"color:${colorNames[i]};\">Output will appear here…</p>`);
-  }
+if(i>colorNames.length) {
+  i=0;
+}
+
 }
 
 function bgColor() {
